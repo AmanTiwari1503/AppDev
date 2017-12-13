@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button counterBtn=(Button) findViewById(R.id.counterBtn);
         Button resetBtn=(Button) findViewById(R.id.resetBtn);
+        Button decreaseBtn=(Button) findViewById(R.id.decreaseBtn);
 
         counterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +33,23 @@ public class MainActivity extends AppCompatActivity {
                 int num=Integer.parseInt(displayTextView.getText().toString());
                 num=0;
                 displayTextView.setText(num+"");
+            }
+        });
+        decreaseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView displayTextView=(TextView) findViewById(R.id.displayTextView);
+                int num=Integer.parseInt(displayTextView.getText().toString());
+                if(num==0)
+                {
+                    num=0;
+                    displayTextView.setText(num+"");
+                }
+                else
+                {
+                    num--;
+                    displayTextView.setText(num + "");
+                }
             }
         });
 
