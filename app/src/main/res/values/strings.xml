@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppDev</string>
+    <string name="counter"> INCREASE\nCOUNTER</string>
+    <string name="todo">TODO</string>
+    <string name="textview">TextView</string>
+    <string name="counter_count">Counter count  :</string>
+    <string name="_0">0</string>
+</resources>
