@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button counterBtn=(Button) findViewById(R.id.counterBtn);
+        Button resetBtn=(Button) findViewById(R.id.resetBtn);
 
         counterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -21,6 +22,15 @@ public class MainActivity extends AppCompatActivity {
                 TextView displayTextView=(TextView) findViewById(R.id.displayTextView);
                 int num=Integer.parseInt(displayTextView.getText().toString());
                 num++;
+                displayTextView.setText(num+"");
+            }
+        });
+        resetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView displayTextView=(TextView) findViewById(R.id.displayTextView);
+                int num=Integer.parseInt(displayTextView.getText().toString());
+                num=0;
                 displayTextView.setText(num+"");
             }
         });
